@@ -1,0 +1,18 @@
+h1 {  
+  text-align: center;
+}
+nav {
+  height: 40%
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.white-text {
+  text-align: center;
+}
