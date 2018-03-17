@@ -55,6 +55,8 @@ $(document).ready(function() {
     var tRemainder = diffTime % trainFrequency;
     var minutesTillTrain = trainFrequency - tRemainder;
 
-    
+    // Calculate the next train time // 
+    var nextTrainTime = moment().add(minutesTillTrain, 'minutes');
+    var nextTrainTimePretty = moment(nextTrainTime).format('hh:mm')
   })
 })
