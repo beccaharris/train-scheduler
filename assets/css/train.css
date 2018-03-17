@@ -1,18 +1,24 @@
-h1 {  
-  text-align: center;
-}
-nav {
-  height: 40%
-}
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
 main {
   flex: 1 0 auto;
 }
+.page-title {  
+  text-align: center;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .white-text {
   text-align: center;
+}
+table {
+  border: 1px solid black
+}
+.form {
+  border: 1px solid black;
+  border-radius: 4px;
 }
