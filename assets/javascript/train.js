@@ -8,7 +8,7 @@ $(document).ready(function() {
     authDomain: "train-schedule-tracker.firebaseapp.com",
     databaseURL: "https://train-schedule-tracker.firebaseio.com",
     projectId: "train-schedule-tracker",
-    storageBucket: "",
+    storageBucket: "train-schedule-tracker.appspot.com",
     messagingSenderId: "921252828224"
   };
   firebase.initializeApp(config);
