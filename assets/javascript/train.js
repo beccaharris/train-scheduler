@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-  $('table').hide();
   // Initialize Firebase // 
   // =================== //
   var config = {
@@ -30,13 +28,13 @@ $(document).ready(function() {
       trainTime: trainTime,
       trainFrequency: trainFrequency
     };
+    // Push the newTrain object to Firebase db //
+    database.ref().push(newTrain)
     // Clear out input fields //
     var trainName = $('#train-name').val(null);
     var trainDestination = $('#train-destination').val(null);
     var trainTime = $('#train-time').val(null);
     var trainFrequency = $('#train-frequency').val(null);
-    // Push the newTrain object to Firebase db //
-    database.ref().push(newTrain)
   })
 
   // Will run after push of newTrain //
@@ -58,5 +56,15 @@ $(document).ready(function() {
     // Calculate the next train time // 
     var nextTrainTime = moment().add(minutesTillTrain, 'minutes');
     var nextTrainTimePretty = moment(nextTrainTime).format('hh:mm')
+
+    $('#train-table > tbody').append(
+      '<tr>' + 
+        '<td>' + trainName + '</td>' +
+        '<td>' + trainDestination + '</td>' +
+        '<td>' + trainFrequency + '</td>' +
+        '<td>' + nextTrainTimePretty + '</td>' +
+        '<td>' + minutesTillTrain + '</td>' +
+      '</tr>'
+    )
   })
 })
