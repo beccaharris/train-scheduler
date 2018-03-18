@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   height: 100%;
   background-color: #ACBEBE;
+  font-family: 'Arsenal', sans-serif;
 }
 main {
   flex: 1 0 auto;
@@ -17,12 +18,20 @@ main {
 .page-footer {
   border-top: 7px solid #A01D26
 }
+thead {
+  border-bottom: 2px solid #20232A;
+  font-weight: bolder;
+}
+.active {
+  color: green
+}
 .page-title {  
   text-align: center;
   margin-top: 0;
   padding-top: 25px;
   padding-bottom: 5px;
-  color: #F4F4EF
+  color: #F4F4EF;
+  letter-spacing: 2px
 }
 .text {
   text-align: center;
@@ -43,12 +52,30 @@ main {
 }
 .fake-panel-header {
   padding: 10px;
-  font-size: 18px;
+  font-size: 22px;
   background-color: #20232A;
   color: #F4F4EF;
   margin-bottom: 5px;
+  letter-spacing: 1px
 }
 .waves-light, .waves-light:hover, .waves-light:focus {
   color: #F4F4EF;
-  background-color: #20232A
+  background-color: #20232A;
+  font-family: 'Arsenal', sans-serif;
+  letter-spacing: 1px;
 }
+button {
+  margin-left: 40px;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+  color: #A01D26 !important;
+ }
+ .prefix.active {
+  color: #A01D26 !important;
+}
+/* label underline focus color */
+ .input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #A01D26 !important;
+  box-shadow: 0 1px 0 0 #A01D26 !important;
+ }

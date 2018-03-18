@@ -21,6 +21,10 @@ $(document).ready(function() {
     var trainDestination = $('#train-destination').val().trim();
     var trainTime = $('#train-time').val().trim();
     var trainFrequency = $('#train-frequency').val().trim();
+
+    if ((trainName.length === 0) || (trainDestination.length === 0) || (trainTime.length === 0) || (trainFrequency.length === 0))  {
+      return false
+    }
     // Define the object that's gonna be pushed to Firebase
     var newTrain = {
       trainName: trainName,
