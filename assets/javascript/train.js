@@ -47,7 +47,7 @@ $(document).ready(function() {
     
     // Get the minutes until the next train // 
     var trainFrequency = parseInt(trainFrequency)
-    var trainTimeConverted = moment(trainTime, 'HH:mm').subtract(1, 'years');
+    var trainTimeConverted = moment(trainTime, 'hh:mm A').subtract(1, 'years');
     var currentTime = moment();
     var diffTime = moment().diff(moment(trainTimeConverted), 'minutes');   
     var tRemainder = diffTime % trainFrequency;
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
     // Calculate the next train time // 
     var nextTrainTime = moment().add(minutesTillTrain, 'minutes');
-    var nextTrainTimePretty = moment(nextTrainTime).format('hh:mm')
+    var nextTrainTimePretty = moment(nextTrainTime).format('hh:mm A')
 
     $('#train-table > tbody').append(
       '<tr>' + 

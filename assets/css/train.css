@@ -3,29 +3,52 @@ body {
   min-height: 100vh;
   flex-direction: column;
   height: 100%;
+  background-color: #ACBEBE;
 }
 main {
   flex: 1 0 auto;
 }
+.nav-extended, .page-footer {
+  background-color: #20232A
+}
+.nav-extended {
+  border-bottom: 7px solid #A01D26
+}
+.page-footer {
+  border-top: 7px solid #A01D26
+}
 .page-title {  
   text-align: center;
   margin-top: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  color: #F4F4EF
 }
-.white-text {
+.text {
   text-align: center;
+  color: #F4F4EF
 }
-
+.form, .table  {
+  border: 1px solid #A01D26;
+  border-radius: 4px;
+  background-color: rgb(212, 212, 212);
+}
 .form {
-  border: 1px solid black;
-  border-radius: 4px
+  margin-bottom: 2em;
 }
 .table {
   border-collapse: separate !important;
-  border: 1px solid black;
-  border-radius: 4px
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 .fake-panel-header {
-  background-color: blue;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #20232A;
+  color: #F4F4EF;
+  margin-bottom: 5px;
+}
+.waves-light, .waves-light:hover, .waves-light:focus {
+  color: #F4F4EF;
+  background-color: #20232A
 }
