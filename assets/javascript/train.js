@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  var newIconEdit = $('<img>')
+  var editIcon = newIconEdit.attr('src', 'assets/images/ic_mode_edit_black_24dp_2x.png')
+  var newIconDelete = $('<img src="assets/images/ic_delete_forever_black_24dp_2x.png">')
   // Initialize Firebase // 
   // =================== //
   var config = {
@@ -14,7 +17,7 @@ $(document).ready(function() {
   var database = firebase.database();
 
   // Function on click of submit (add-train) button // 
-  $('#add-train').on("click", function(event) {
+  $('#add-train').on('click', function(event) {
     event.preventDefault();
     // Grab user input //
     var trainName = $('#train-name').val().trim();
@@ -63,12 +66,12 @@ $(document).ready(function() {
 
     $('#train-table > tbody').append(
       '<tr>' + 
-        '<td>' + trainName + '</td>' +
-        '<td>' + trainDestination + '</td>' +
-        '<td>' + trainFrequency + '</td>' +
-        '<td>' + nextTrainTimePretty + '</td>' +
-        '<td>' + minutesTillTrain + '</td>' +
-      '</tr>'
+        '<td>' + trainName + 
+        '<td>' + trainDestination +
+        '<td>' + trainFrequency + 
+        '<td>' + nextTrainTimePretty + 
+        '<td>' + minutesTillTrain + 
+        '<td>' 
     )
   })
 })
