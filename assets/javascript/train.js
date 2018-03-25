@@ -1,7 +1,4 @@
 $(document).ready(function() {
-  var newIconEdit = $('<img>')
-  var editIcon = newIconEdit.attr('src', 'assets/images/ic_mode_edit_black_24dp_2x.png')
-  var newIconDelete = $('<img src="assets/images/ic_delete_forever_black_24dp_2x.png">')
   // Initialize Firebase // 
   // =================== //
   var config = {
@@ -14,7 +11,7 @@ $(document).ready(function() {
   };
   firebase.initializeApp(config);
 
-  var database = firebase.database();
+  const database = firebase.database();
 
   // Function on click of submit (add-train) button // 
   $('#add-train').on('click', function(event) {
@@ -55,7 +52,6 @@ $(document).ready(function() {
     // Get the minutes until the next train // 
     var trainFrequency = parseInt(trainFrequency)
     var trainTimeConverted = moment(trainTime, 'hh:mm A').subtract(1, 'years');
-    var currentTime = moment();
     var diffTime = moment().diff(moment(trainTimeConverted), 'minutes');   
     var tRemainder = diffTime % trainFrequency;
     var minutesTillTrain = trainFrequency - tRemainder;
@@ -65,13 +61,12 @@ $(document).ready(function() {
     var nextTrainTimePretty = moment(nextTrainTime).format('hh:mm A')
 
     $('#train-table > tbody').append(
-      '<tr>' + 
-        '<td>' + trainName + 
-        '<td>' + trainDestination +
-        '<td>' + trainFrequency + 
-        '<td>' + nextTrainTimePretty + 
-        '<td>' + minutesTillTrain + 
-        '<td>' 
+      `<tr> 
+        <td>${trainName} 
+        <td>${trainDestination}
+        <td>${trainFrequency}
+        <td>${nextTrainTimePretty}
+        <td>${minutesTillTrain}` 
     )
   })
 })
