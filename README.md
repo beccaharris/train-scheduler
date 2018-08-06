@@ -1,6 +1,6 @@
 <h1>Train Scheduler</h1>
   <p>DU Coding Bootcamp - Week 7 Firebase Homework
-    View project at <a target='_blank' href='https://beccaharris.github.io/train-scheduler/'>GitHub Pages</a> or <a target='_blank' href='https://train-schedule-tracker.herokuapp.com/'>Heroku</a>
+    View project at <a target='_blank' href='https://beccakostyo.github.io/train-scheduler/'>GitHub Pages</a> or <a target='_blank' href='https://train-schedule-tracker.herokuapp.com/'>Heroku</a>
   </p>
 
 <h2>Description</h2>
